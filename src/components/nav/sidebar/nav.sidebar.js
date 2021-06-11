@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavLink} from "react-bootstrap";
 
-const { compItem, utilItem, pageItems } = require('./sidebar.content');
+const {compItem, utilItem, pageItems} = require('./sidebar.content');
 
 function renderCollapseItemLink(collapseLinks) {
     const links = [];
@@ -43,13 +43,12 @@ function SidebarHeading(props) {
 }
 
 function CollapseSideBarItem(props) {
-    const compItem = renderCollapseItems(props.items);
-    return compItem;
+    return renderCollapseItems(props.items);
 }
 
-function SidebarDivider() {
+function SidebarDivider(props) {
     return (
-        <hr className="sidebar-divider" />
+        <hr className={"sidebar-divider " + props.border}/>
     );
 }
 
@@ -57,7 +56,7 @@ function SidebarHome() {
     return (
         <NavLink className="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
             <div className="sidebar-brand-icon rotate-n-15">
-                <i className="fas fa-laugh-wink"></i>
+                <i className="fas fa-laugh-wink"/>
             </div>
             <div className="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
         </NavLink>
@@ -68,18 +67,18 @@ function SidebarStandardItem(props) {
     return (
         <li className="nav-item">
             <a className="nav-link" href={props.href}>
-                <i className={props.icon}></i>
+                <i className={props.icon}/>
                 <span>{props.title}</span></a>
         </li>
     );
 }
 
-export function SidebarNav() {
+export function NavSidebar() {
     return (
         <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <SidebarHome/>
-            <SidebarDivider/>
+            <SidebarDivider border="my-0"/>
             <SidebarStandardItem icon="fas fa-fw fa-tachometer-alt" href="/" title="Dashboard"/>
             <SidebarDivider/>
             <SidebarHeading heading="Interface"/>
@@ -98,7 +97,7 @@ export function SidebarNav() {
             <SidebarDivider/>
 
             <div className="text-center d-none d-md-inline">
-                <button className="rounded-circle border-0" id="sidebarToggle"></button>
+                <button className="rounded-circle border-0" id="sidebarToggle"/>
             </div>
 
         </ul>

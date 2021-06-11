@@ -1,10 +1,18 @@
 import React from "react";
 
-import {SidebarNav} from "@app/components/sidebar.nav/sidebar.nav";
+import {NavSidebar} from "@app/components/nav/sidebar/nav.sidebar";
+import NavTopbar from "@app/components/nav/topbar/nav.topbar";
 
 function Main() {
     return (
-        <SidebarNav/>
+        <div id="wrapper">
+            <NavSidebar/>
+            <div id="content-wrapper" className="d-flex flex-column">
+                <div id="content">
+                    <NavTopbar/>
+                </div>
+            </div>
+        </div>
     );
 }
 
