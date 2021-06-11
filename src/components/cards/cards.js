@@ -67,16 +67,6 @@ function renderDropdownItems(items) {
     return dropdownItems;
 }
 
-function CardDropdownItem({items}) {
-    const dropdownItems = renderDropdownItems(items);
-    return (
-        <div className="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-             aria-labelledby="dropdownMenuLink">
-            {dropdownItems}
-        </div>
-    )
-}
-
 export function DropdownCard(props) {
     const dropdownItems = renderDropdownItems(props.items);
     return (
