@@ -12,7 +12,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "bootstrap": "^4.3.1",
-    "chart.js": "^2.8.0",
+    "chart.js": "^2.9.4",
     "customize-cra": "^1.0.0",
     "jquery": "^3.4.1",
     "mixin-deep": "^2.0.1",
