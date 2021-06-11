@@ -1,5 +1,14 @@
 import React from "react";
 
+export function EmptyCard(props) {
+    return (
+        <div className={"card shadow " + props.colour + " " + props.textColour}>
+            <div className="card-body">
+                {props.children}
+            </div>
+        </div>
+    );
+}
 export function SmallCard(props) {
     return (
         <div className={"card shadow h-100 py-2 " + props.status}>
