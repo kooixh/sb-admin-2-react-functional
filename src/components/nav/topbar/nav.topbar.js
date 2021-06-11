@@ -1,7 +1,7 @@
 import React from "react";
 import {NavLink} from "react-bootstrap";
 
-import q from '../../../assets/img/undraw_profile.svg';
+import anonymousPic from '../../../assets/img/undraw_profile.svg';
 
 const {alerts, messages, userActions, user} = require('./topbar.content');
 
@@ -96,7 +96,7 @@ function MessageItem({item}) {
     return (
         <a className="dropdown-item d-flex align-items-center" href={item.link}>
             <div className="dropdown-list-image mr-3">
-                <img className="rounded-circle" src={item.picSrc === 'internal' ?  q : item.profilePic} alt="..."/>
+                <img className="rounded-circle" src={item.picSrc === 'internal' ?  anonymousPic : item.profilePic} alt="..."/>
                 <div className={"status-indicator " + item.messageProps}/>
             </div>
             <div className="font-weight-bold">
@@ -171,7 +171,7 @@ function UsernameItem(props) {
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span className="mr-2 d-none d-lg-inline text-gray-600 small">{props.user.name}</span>
                 <img className="img-profile rounded-circle" src={props.user.picSrc === 'internal' ?
-                    q : props.user.profilePic} alt="profile picture"/>
+                    anonymousPic : props.user.profilePic} alt="profile picture"/>
             </a>
             <div className="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                  aria-labelledby="userDropdown">
