@@ -91,7 +91,7 @@ export function NavSidebar() {
 
             <CollapseSideBarItem items={pageItems}/>
 
-            <SidebarStandardItem icon="fas fa-fw fa-chart-area" href="/chart" title="Charts"/>
+            <SidebarStandardItem icon="fas fa-fw fa-chart-area" href="/charts" title="Charts"/>
             <SidebarStandardItem icon="fas fa-fw fa-chart-area" href="/tables" title="Tables"/>
 
             <SidebarDivider/>
