@@ -7,6 +7,7 @@ import ButtonPage from '@app/views/components/buttons';
 import ColorsPage from '@app/views/utilities/colors';
 import BordersPage from '@app/views/utilities/borders';
 import AnimationPage from '@app/views/utilities/animations';
+import OthersPage from '@app/views/utilities/others';
 
 export const routes = [
     {
@@ -50,6 +51,12 @@ export const routes = [
         render: () => <AnimationPage />,
         status: 200,
         uid: 6,
+    },
+    {
+        path: '/others',
+        render: () => <OthersPage />,
+        status: 200,
+        uid: 7,
     },
     {
         path: '*',
