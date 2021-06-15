@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 
-export function ChartDonut(props) {
+export function DonutChart(props) {
     useEffect(() => props.callback(props.chartRef));
     return (
         <div className="chart-pie pt-4 pb-2">

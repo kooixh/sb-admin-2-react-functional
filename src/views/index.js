@@ -1,5 +1,5 @@
 import React from "react";
-import Dashboard from "@app/views/dashboard/dashboard";
+import Dashboard from "@app/views/dashboard";
 import NotFound from '@app/views/notfound';
 
 

@@ -2,8 +2,8 @@ import React from "react";
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import {NavSidebar} from "@app/components/nav/sidebar/nav.sidebar";
-import NavTopbar from "@app/components/nav/topbar/nav.topbar";
+import {NavSidebar} from "@app/components/nav/sidebar";
+import NavTopbar from "@app/components/nav/topbar";
 import { routes } from '@app/views';
 
 function generateRoutes() {

@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 
-export function ChartLine(props) {
+export function LineChart(props) {
     useEffect(() => props.callback(props.chartRef));
     return (
         <div className="chart-area">
