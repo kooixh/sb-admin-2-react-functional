@@ -1,7 +1,7 @@
-import React from "react";
-import Dashboard from "@app/views/dashboard";
+import React from 'react';
+import Dashboard from '@app/views/dashboard';
 import NotFound from '@app/views/notfound';
-import CardPage from "@app/views/cards";
+import CardPage from '@app/views/cards';
 
 
 export const routes = [

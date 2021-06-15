@@ -1,6 +1,6 @@
-import React from "react";
-import {SimpleHeader} from "@app/components/header";
-import {BasicCard, SmallCard, DefaultCard, DropdownCard, CollapseCard} from "@app/components/cards";
+import React from 'react';
+import {SimpleHeader} from '@app/components/header';
+import {BasicCard, SmallCard, DefaultCard, DropdownCard, CollapseCard} from '@app/components/cards';
 
 function CardPage() {
     return (
