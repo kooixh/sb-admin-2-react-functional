@@ -139,7 +139,7 @@ function Dashboard() {
     let earningsChartRef = React.createRef();
     let revenueChartRef = React.createRef();
     return (
-        <div className="container-fluid">
+        <div>
             <ButtonHeader link="/generate" buttonContent="Generate Report">Dashboard</ButtonHeader>
             <div className="row">
                 <div className="col-xl-3 col-md-6 mb-4">

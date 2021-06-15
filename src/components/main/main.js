@@ -23,7 +23,9 @@ function Main() {
                 <div id="content-wrapper" className="d-flex flex-column">
                     <div id="content">
                         <NavTopbar/>
-                        <Switch>{routers}</Switch>
+                        <div className="container-fluid">
+                            <Switch>{routers}</Switch>
+                        </div>
                     </div>
                 </div>
             </Router>
