@@ -1,19 +1,34 @@
 import React from "react";
 
-import {NavSidebar} from "@app/components/nav/sidebar/nav.sidebar";
-import NavTopbar from "@app/components/nav/topbar/nav.topbar";
-import Dashboard from "@app/views/dashboard/dashboard";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import {NavSidebar} from "@app/components/nav/sidebar";
+import NavTopbar from "@app/components/nav/topbar";
+import { routes } from '@app/views';
+
+function generateRoutes() {
+    const routesRouter = [];
+    routes.forEach((elem) => {
+        routesRouter.push(<Route exact path={elem.path} render={elem.render} key={elem.uid} status={elem.status} />);
+    });
+    return routesRouter;
+}
 
 function Main() {
+    const routers = generateRoutes();
     return (
         <div id="wrapper">
-            <NavSidebar/>
-            <div id="content-wrapper" className="d-flex flex-column">
-                <div id="content">
-                    <NavTopbar/>
-                    <Dashboard/>
+            <Router>
+                <NavSidebar/>
+                <div id="content-wrapper" className="d-flex flex-column">
+                    <div id="content">
+                        <NavTopbar/>
+                        <div className="container-fluid">
+                            <Switch>{routers}</Switch>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </Router>
         </div>
     );
 }

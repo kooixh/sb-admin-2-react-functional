@@ -1,12 +1,12 @@
 import React from "react";
 
-import {ButtonHeader} from '@app/components/header/header';
-import {BasicCard, DropdownCard, EmptyCard, SmallCard} from '@app/components/cards/cards';
-import {ChartLine} from '@app/components/charts/chart.line';
+import {ButtonHeader} from '@app/components/header';
+import {BasicCard, DropdownCard, EmptyCard, SmallCard} from '@app/components/cards';
+import {LineChart} from '@app/components/charts/line';
 
 
 import Chart from 'chart.js';
-import {ChartDonut} from '@app/components/charts/chart.donut';
+import {DonutChart} from '@app/components/charts/donut';
 
 import illusImg from '@app/assets/img/undraw_posting_photo.svg';
 
@@ -139,7 +139,7 @@ function Dashboard() {
     let earningsChartRef = React.createRef();
     let revenueChartRef = React.createRef();
     return (
-        <div className="container-fluid">
+        <div>
             <ButtonHeader link="/generate" buttonContent="Generate Report">Dashboard</ButtonHeader>
             <div className="row">
                 <div className="col-xl-3 col-md-6 mb-4">
@@ -170,7 +170,7 @@ function Dashboard() {
 
                 <div className="col-xl-8 col-lg-7">
                     <BasicCard title="Earnings Overview">
-                        <ChartLine callback={earningsChartCallback} chartId="earningChart" chartRef={earningsChartRef}/>
+                        <LineChart callback={earningsChartCallback} chartId="earningChart" chartRef={earningsChartRef}/>
                         <hr />
                         Styling for the area chart can be found in the <code>/Components/Charts/Line/Index.js</code> file.
                     </BasicCard>
@@ -182,7 +182,7 @@ function Dashboard() {
                     <DropdownCard cardHeader="Revenue Sources" items={[{link: '/action', title: 'Action', type: 'link'},
                         {link: '/action', title: 'Another Action', type: 'link'}, {type: 'divider'},
                         {link: '/action', title: 'Something else', type: 'link'}]} dropdownHeader="Dropdown Header">
-                        <ChartDonut callback={revenueChartsCallback} chartId="revueChart" chartRef={revenueChartRef}/>
+                        <DonutChart callback={revenueChartsCallback} chartId="revueChart" chartRef={revenueChartRef}/>
                         <div className="mt-4 text-center small">
                             <span className="mr-2">
                                 <i className="fas fa-circle text-primary"/> Direct
