@@ -4,6 +4,7 @@ import NotFound from '@app/views/notfound';
 import CardPage from '@app/views/cards';
 import ChartPage from '@app/views/charts';
 import ButtonPage from '@app/views/buttons';
+import ColorsPage from '@app/views/colors';
 
 export const routes = [
     {
@@ -29,6 +30,12 @@ export const routes = [
         render: () => <ButtonPage />,
         status: 200,
         uid: 4,
+    },
+    {
+        path: '/colors',
+        render: () => <ColorsPage />,
+        status: 200,
+        uid: 5,
     },
     {
         path: '*',
