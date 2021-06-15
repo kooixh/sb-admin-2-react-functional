@@ -9,6 +9,16 @@ export function EmptyCard(props) {
         </div>
     );
 }
+
+export function SingleCard(props) {
+    return (
+        <div className={"card mb-4 py-3 border-" + props.border + "-" + props.status}>
+            <div className="card-body">
+                {props.children}
+            </div>
+        </div>
+    )
+}
 export function SmallCard(props) {
     return (
         <div className={"card shadow h-100 py-2 " + props.status}>
