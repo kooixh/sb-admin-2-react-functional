@@ -73,9 +73,14 @@ function SidebarStandardItem(props) {
     );
 }
 
+function toggleSidebar() {
+    document.querySelector('body').classList.toggle('sidebar-toggled');
+    document.querySelector('.sidebar').classList.toggle('toggled');
+}
+
 export function NavSidebar() {
     return (
-        <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion " id="accordionSidebar">
 
             <SidebarHome/>
             <SidebarDivider border="my-0"/>
@@ -97,7 +102,7 @@ export function NavSidebar() {
             <SidebarDivider/>
 
             <div className="text-center d-none d-md-inline">
-                <button className="rounded-circle border-0" id="sidebarToggle"/>
+                <button className="rounded-circle border-0" id="sidebarToggle" onClick={toggleSidebar}/>
             </div>
 
         </ul>
