@@ -1,11 +1,12 @@
 import React from 'react';
 import Dashboard from '@app/views/dashboard';
 import NotFound from '@app/views/notfound';
-import CardPage from '@app/views/cards';
+import CardPage from '@app/views/components/cards';
 import ChartPage from '@app/views/charts';
-import ButtonPage from '@app/views/buttons';
-import ColorsPage from '@app/views/colors';
-import BordersPage from '@app/views/borders';
+import ButtonPage from '@app/views/components/buttons';
+import ColorsPage from '@app/views/utilities/colors';
+import BordersPage from '@app/views/utilities/borders';
+import AnimationPage from '@app/views/utilities/animations';
 
 export const routes = [
     {
@@ -41,6 +42,12 @@ export const routes = [
     {
         path: '/borders',
         render: () => <BordersPage />,
+        status: 200,
+        uid: 6,
+    },
+    {
+        path: '/animations',
+        render: () => <AnimationPage />,
         status: 200,
         uid: 6,
     },

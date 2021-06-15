@@ -12,7 +12,7 @@ function ColorsPage() {
                 framework.</p>
             <div className="row">
                 <div className="col-lg-4">
-                    <BasicCard classHeader="Custom Text Color Utilities<">
+                    <BasicCard cardHeader="Custom Text Color Utilities<">
                         <p className="text-gray-100 p-3 bg-dark m-0">.text-gray-100</p>
                         <p className="text-gray-200 p-3 bg-dark m-0">.text-gray-200</p>
                         <p className="text-gray-300 p-3 bg-dark m-0">.text-gray-300</p>
