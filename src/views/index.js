@@ -3,7 +3,7 @@ import Dashboard from '@app/views/dashboard';
 import NotFound from '@app/views/notfound';
 import CardPage from '@app/views/cards';
 import ChartPage from '@app/views/charts';
-
+import ButtonPage from '@app/views/buttons';
 
 export const routes = [
     {
@@ -23,6 +23,12 @@ export const routes = [
         render: () => <ChartPage />,
         status: 200,
         uid: 3,
+    },
+    {
+        path: '/buttons',
+        render: () => <ButtonPage />,
+        status: 200,
+        uid: 4,
     },
     {
         path: '*',
