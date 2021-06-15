@@ -1,5 +1,18 @@
 import React from 'react';
 
+export function BaseCard(props) {
+    return (
+        <div className={"card " + props.className}>
+            <div className={"card-header " + props.headerClass}>
+                {props.cardHeader}
+            </div>
+            <div className={"card-body " + props.bodyClass}>
+                {props.children}
+            </div>
+        </div>
+    )
+}
+
 export function EmptyCard(props) {
     return (
         <div className={"card shadow " + props.colour + " " + props.textColour}>
@@ -8,6 +21,16 @@ export function EmptyCard(props) {
             </div>
         </div>
     );
+}
+
+export function SingleCard(props) {
+    return (
+        <div className={"card mb-4 py-3 border-" + props.border + "-" + props.status}>
+            <div className="card-body">
+                {props.children}
+            </div>
+        </div>
+    )
 }
 export function SmallCard(props) {
     return (
@@ -32,27 +55,18 @@ export function SmallCard(props) {
 
 export function DefaultCard(props) {
     return (
-        <div className="card mb-4">
-            <div className="card-header">
-                {props.cardHeader}
-            </div>
-            <div className="card-body">
-                {props.children}
-            </div>
-        </div>
+        <BaseCard className="mb-4" cardHeader={props.cardHeader}>
+            {props.children}
+        </BaseCard>
     );
 }
 
 export function BasicCard(props) {
+    let header = <h6 className="m-0 font-weight-bold text-primary">{props.cardHeader}</h6>
     return (
-        <div className="card shadow mb-4">
-            <div className="card-header py-3">
-                <h6 className="m-0 font-weight-bold text-primary">{props.cardHeader}</h6>
-            </div>
-            <div className="card-body">
-                {props.children}
-            </div>
-        </div>
+        <BaseCard className="shadow mb-4" headerClass="py-3" cardHeader={header}>
+            {props.children}
+        </BaseCard>
     );
 }
 

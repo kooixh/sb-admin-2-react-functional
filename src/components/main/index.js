@@ -19,8 +19,8 @@ function Main() {
     const routers = generateRoutes();
     return (
         <div id="wrapper">
+            <NavSidebar/>
             <Router>
-                <NavSidebar/>
                 <div id="content-wrapper" className="d-flex flex-column">
                     <div id="content">
                         <NavTopbar/>

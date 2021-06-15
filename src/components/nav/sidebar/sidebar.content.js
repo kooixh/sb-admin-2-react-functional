@@ -33,7 +33,7 @@ module.exports = {
             },
             {
                 title: "Animations",
-                href: "/animation"
+                href: "/animations"
             },
             {
                 title: "Others",
