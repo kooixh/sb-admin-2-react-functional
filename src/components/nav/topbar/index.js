@@ -1,5 +1,5 @@
-import React from "react";
-import {NavLink} from "react-bootstrap";
+import React from 'react';
+import {NavLink} from 'react-bootstrap';
 
 import anonymousPic from '../../../assets/img/undraw_profile.svg';
 
